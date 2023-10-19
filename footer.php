@@ -110,17 +110,17 @@
                             <li class="footer-nav__item-title">
                                 <a href="<?php echo $information ?>">ダイビング情報</a>
                             </li>
-                                <ul class="footer-nav__item js-tab-link-footer footer-nav__item-normal">
-                                    <li>
-                                        <a href="<?php echo esc_url( home_url( '/information#info1' ) ); ?>">ライセンス講習</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo esc_url( home_url( '/information#info2' ) ); ?>">体験ダイビング</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo esc_url( home_url( '/information#info3' ) ); ?>">ファンダイビング</a>
-                                    </li>
-                                </ul>
+                            <ul class="footer-nav__item js-tab-link-footer footer-nav__item-normal">
+                                <li>
+                                    <a href="<?php echo esc_url( home_url( '/information#info1' ) ); ?>">ライセンス講習</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo esc_url( home_url( '/information#info2' ) ); ?>">体験ダイビング</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo esc_url( home_url( '/information#info3' ) ); ?>">ファンダイビング</a>
+                                </li>
+                            </ul>
                             
                             <li class="footer-nav__item-title">
                                 <a href="<?php echo $blog ?>">ブログ</a>
