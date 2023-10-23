@@ -101,21 +101,6 @@ jQuery(function ($) {
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
     //ハンバーガーメニュー
     $('.js-hamburger').on('click', function () {
       if ($('.js-hamburger').hasClass('is-open')) {

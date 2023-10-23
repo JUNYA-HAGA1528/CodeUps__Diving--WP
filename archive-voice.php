@@ -58,10 +58,13 @@
                                     <div class="voice-card__head">
                                         <div class="voice-card__head-left">
                                             <div class="voice-card__head-flex">
-                                                <div class="voice-card__head-flex--flex">
-                                                    <p class="voice-card__gender"><?php the_field('voice_1'); ?></p>
-                                                    <p class="voice-card__gender">(<?php the_field('voice_2'); ?>)</p>
-                                                </div>
+                                                <p class="voice-card__age">
+                                                    <?php 
+                                                        $voice_group = get_field('voice_group'); 
+                                                        echo $voice_group['voice_1'] . ' (' . $voice_group['voice_2'] . ')';
+                                                    ?>
+                                                </p>
+
                                                 <?php
                                                     $terms = get_the_terms(get_the_ID(), 'voice_category'); // カスタムタクソノミーのタームを取得
                                                     if ($terms && !is_wp_error($terms)) { // タームが取得されているか確認
