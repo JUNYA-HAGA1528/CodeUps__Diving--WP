@@ -49,11 +49,6 @@
     
 
 
-
-
-
-
-    
     <main>
         <!-- campaign -->
         <section class="top-campaign campaign">
@@ -69,7 +64,7 @@
                 <div class="campaign__slider campaign-cards swiper js-campaign-swiper">
                     <?php
                         $args = array('post_type' => 'campaign',
-                        'posts_per_page' => -1); 
+                        'posts_per_page' => 8); 
                         $the_query = new WP_Query($args); 
                     ?>
                     <ul class="campaign-cards__items swiper-wrapper">

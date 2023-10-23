@@ -101,6 +101,14 @@ jQuery(function ($) {
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
     //ハンバーガーメニュー
     $('.js-hamburger').on('click', function () {
       if ($('.js-hamburger').hasClass('is-open')) {
@@ -127,28 +135,29 @@ jQuery(function ($) {
   
   //Campaign swiper
   var swiper = new Swiper(".js-campaign-swiper", {
-    
-      slidesPerView: "auto", //スライド枚数 1.26枚
-  
-      //〇〇以上の画面幅で〇〇枚のスライドと幅が〇〇pxと設定する
-      breakpoints: { 
-          768: {
-              spaceBetween: 40,
-          },
-      },
-  
-      spaceBetween: 24, 
-      speed: 1000, 
-      loop: true, 
-      autoplay: {
-          delay: 5000, 
-          disableOnInteraction: false 
-      },
-      // ボタンを押した際の、スライド
-      navigation: {
-          nextEl: ".js-campaign-button-next",
-          prevEl: ".js-campaign-button-prev"
+    slidesPerView: "auto",
+    //スライド枚数 1.26枚
+
+    //〇〇以上の画面幅で〇〇枚のスライドと幅が〇〇pxと設定する
+    breakpoints: {
+      1440: {
+        slidesPerView: "3.5",
+        spaceBetween: 40
       }
+    },
+    
+    spaceBetween: 24,
+    speed: 1000,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    // ボタンを押した際の、スライド
+    navigation: {
+      nextEl: ".js-campaign-button-next",
+      prevEl: ".js-campaign-button-prev"
+    }
   });
   
   
