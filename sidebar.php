@@ -72,7 +72,7 @@
                 </div>
                 <h2 class="aside__heading-title">口コミ</h2>
             </div>
-            <ul class="aside__items aside-voice-item">
+            <ul class="aside__items aside-voice-item"></ul>
                 <?php
                     $args = array('post_type' => 'voice',
                     'posts_per_page' => 1); 
@@ -89,9 +89,13 @@
                                 <?php endif; ?>
                             </div>
                             <div class="aside-voice-item__text">
-                                <div class="voice-card__head-flex--flex">
-                                    <p class="voice-card__gender"><?php the_field('voice_1'); ?></p>
-                                    <p class="voice-card__gender">(<?php the_field('voice_2'); ?>)</p>
+                                <div class="voice-card__head-flex">
+                                    <p class="voice-card__age">
+                                        <?php 
+                                            $voice_group = get_field('voice_group'); 
+                                            echo $voice_group['voice_1'] . ' (' . $voice_group['voice_2'] . ')';
+                                        ?>
+                                    </p>
                                 </div>
                                 <p class="aside-voice-item__title">
                                     <?php the_title(); ?>
