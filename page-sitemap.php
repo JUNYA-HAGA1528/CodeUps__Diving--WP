@@ -41,7 +41,7 @@
                 <div class="footer__wrapper">
                     <div class="footer__container footer-nav">
                         <ul class="footer-nav__items">
-                            <li class="footer-nav__item footer-nav__item--black">
+                            <li class="footer-nav__item">
                                 <div class="footer-nav__item-title footer-nav__item-title--logo">
                                     <a href="<?php echo $campaign ?>">キャンペーン</a>
                                 </div>

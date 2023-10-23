@@ -15,7 +15,7 @@
 
 
 <!--aside-->
-<div class="aside">
+<aside class="aside">
     <div class="aside__inner">
 
         <!--blog-->
@@ -215,4 +215,4 @@
         </div>
         <!--archive -->
     </div>
-</div>
+</aside>
