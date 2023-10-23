@@ -125,7 +125,6 @@ function Change_menulabel() {
 /*========================================================= 
 SCFの設定
 =========================================================*/
-
   /* 料金一覧*/
 SCF::add_options_page( '', '料金一覧', 'manage_options', 'theme-options-pricing', 'dashicons-money-alt', 9 );
 
@@ -137,8 +136,9 @@ SCF::add_options_page( '', 'ギャラリー', 'manage_options', 'theme-options-g
 
 
 
-/* アーカイブの表示件数変更
-***************************************************************/
+/*========================================================= 
+アーカイブ 表示件数
+=========================================================*/
 function change_posts_per_page($query) {
   if ( is_admin() || ! $query->is_main_query() )
       return;
@@ -152,17 +152,19 @@ function change_posts_per_page($query) {
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 
 
-/* タクソノミーの表示件数変更
-***************************************************************/
+
+/*========================================================= 
+タクソノミー 表示件数
+=========================================================*/
 function custom_taxonomy_archive_posts_per_page($query) {
   if ( is_admin() || ! $query->is_main_query() )
       return;
 
-  if ( $query->is_tax('campaign_category') ) { // campaign_category タクソノミーのアーカイブページ
+  if ( $query->is_tax('campaign_category') ) { // campaignページを
       $query->set('posts_per_page', 4); // 表示件数を4件に指定
   }
 
-  if ( $query->is_tax('voice_category') ) { // voice_category タクソノミーのアーカイブページ
+  if ( $query->is_tax('voice_category') ) { // voiceページを
       $query->set('posts_per_page', 6); // 表示件数を6件に指定
   }
 }
@@ -184,8 +186,9 @@ add_filter('body_class', 'custom_body_class');
 
 
 
-/* サイドバー・blog　人気記事
-***************************************************************/
+/*========================================================= 
+サイドバー ブログを人気件数順に表示する
+=========================================================*/
 //記事閲覧数を取得する
 function getPostViews($postID){
   $count_key = 'post_views_count';
@@ -230,8 +233,10 @@ function is_bot() {
 }
 
 
-/* アーカイブページ タイトル
-***************************************************************/
+
+/*========================================================= 
+サイドバー アーカイブページ
+=========================================================*/
 add_filter( 'get_the_archive_title', function ($title) {
   if (is_category()) {
     $title = single_cat_title('', false);
@@ -258,8 +263,9 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 
 
-/* Contact Form 7で自動挿入されるPタグ、brタグを削除
-***************************************************************/
+/*========================================================= 
+Contact Form 7で自動挿入されるPタグ、brタグを削除
+=========================================================*/
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
@@ -267,8 +273,9 @@ function wpcf7_autop_return_false() {
 
 
 
-/* Contact Form 7 のカスタマイズ
-***************************************************************/
+/*========================================================= 
+Contact Form 7 キャンペーンを引っ張ってくる
+=========================================================*/
 function filter_wpcf7_form_tag($scanned_tag, $replace) {
   if (!empty($scanned_tag)) {
     if ($scanned_tag['name'] == 'menu-968') {
@@ -303,6 +310,9 @@ add_filter('wpcf7_form_tag', 'filter_wpcf7_form_tag', 11, 2);
 
 
 
+/*========================================================= 
+Contact Form 7 送信後に完了ページに移行する
+=========================================================*/
 add_action('wp_footer', 'redirect_to_thanks_page');
 function redirect_to_thanks_page() {
   $homeUrl = home_url();

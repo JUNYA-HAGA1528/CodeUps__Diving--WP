@@ -18,61 +18,26 @@
     <section class="fv">
         <div class="swiper js-fv-swiper">
             <div class="swiper-wrapper">
-                <?php
-                    $group_name = get_field('group1');	
-                    if( $group_name ): 
-                ?>
-                    <div class="swiper-slide">
-                        <div class="fv__slide">
-                            <picture>
-                                <source media="(min-width: 768px)" srcset="<?php echo $group_name['mv_img1']; ?>" alt="<?php echo $group_name['mv_img_alt']; ?>">
-                                <img src="<?php echo $group_name['mv_img2']; ?>" alt="<?php echo $group_name['mv_img_alt']; ?>">
-                            </picture>
-                        </div>
-                    </div>   
-                <?php endif; ?>
-
-                <?php
-                    $group_name = get_field('group2');	
-                    if( $group_name ): 
-                ?>
-                    <div class="swiper-slide">
-                        <div class="fv__slide">
-                            <picture>
-                                <source media="(min-width: 768px)" srcset="<?php echo $group_name['mv_img1']; ?>" alt="<?php echo $group_name['mv_img_alt']; ?>">
-                                    <img src="<?php echo $group_name['mv_img2']; ?>" alt="<?php echo $group_name['mv_img_alt']; ?>">
-                            </picture>
-                        </div>
-                    </div> 
-                <?php endif; ?> 
-                
-                <?php
-                    $group_name = get_field('group3');	
-                    if( $group_name ): 
-                ?>
-                    <div class="swiper-slide">
-                        <div class="fv__slide">
-                            <picture>
-                                <source media="(min-width: 768px)" srcset="<?php echo $group_name['mv_img1']; ?>" alt="<?php echo $group_name['mv_img_alt']; ?>">
-                                    <img src="<?php echo $group_name['mv_img2']; ?>" alt="<?php echo $group_name['mv_img_alt']; ?>">
-                            </picture>
-                        </div>
-                    </div> 
-                <?php endif; ?> 
-
-                <?php
-                    $group_name = get_field('group4');	
-                    if( $group_name ): 
-                ?>
-                    <div class="swiper-slide">
-                        <div class="fv__slide">
-                            <picture>
-                                <source media="(min-width: 768px)" srcset="<?php echo $group_name['mv_img1']; ?>" alt="<?php echo $group_name['mv_img_alt']; ?>">
-                                    <img src="<?php echo $group_name['mv_img2']; ?>" alt="<?php echo $group_name['mv_img_alt']; ?>">
-                            </picture>
-                        </div>
-                    </div> 
-                <?php endif; ?> 
+                <?php for ($i = 1; $i <= 4; $i++) : ?>
+                    <?php
+                        $slide_img_pc = get_field('main_pc');
+                        $slide_img_sp = get_field('main_sp');
+                        $slide_img_alt = get_field('main_alt');
+                        $main_pc_image = esc_url($slide_img_pc['main-pc_' . $i]);
+                        $main_sp_image = esc_url($slide_img_sp['main-sp_' . $i]);
+                        $main_img_alt = esc_attr($slide_img_alt['main-alt_' . $i]);
+                        if ($main_pc_image && $main_sp_image) :
+                    ?>
+                        <div class="swiper-slide">
+                            <div class="fv__slide">
+                                <picture>
+                                    <source media="(min-width: 768px)" srcset="<?php echo $main_pc_image; ?>" />
+                                    <img src="<?php echo $main_sp_image; ?>" alt="<?php echo $main_img_alt; ?>" />
+                                </picture>
+                            </div>
+                        </div>   
+                    <?php endif; ?>
+                <?php endfor; ?>
             </div>
             <div class="fv__heading heading">
                 <h2 class="heading__title">diving</h2>
