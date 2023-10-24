@@ -205,10 +205,17 @@
         </div>
     </footer>
 
+
+
+
     <!-- スクロールトップ -->
     <div class="scroll-top js-scroll-top">
         <a href="#"><img src="<?php echo get_theme_file_uri(); ?>/dist/assets/images/common/top-scroll.png" alt="上向きの矢印"></a>
     </div>
+
+
+
+    
 </body>
 <?php wp_footer(); ?>
 </html>

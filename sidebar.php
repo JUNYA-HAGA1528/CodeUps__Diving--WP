@@ -38,8 +38,8 @@
 
                 $custom_query = new WP_Query($args);
 
-                if ($custom_query->have_posts()) :
-                    while ($custom_query->have_posts()) : $custom_query->the_post();?>
+                if ($custom_query->have_posts()) :?>
+                    <?php while ($custom_query->have_posts()) : $custom_query->the_post();?>
                         <a href="<?php the_permalink(); ?>" class="aside-blog-item__link">
                             <li class="aside-blog-item__flex">
                                 <div class="aside-blog-item__img">
@@ -72,7 +72,7 @@
                 </div>
                 <h2 class="aside__heading-title">口コミ</h2>
             </div>
-            <ul class="aside__items aside-voice-item"></ul>
+            <ul class="aside__items aside-voice-item">
                 <?php
                     $args = array('post_type' => 'voice',
                     'posts_per_page' => 1); 

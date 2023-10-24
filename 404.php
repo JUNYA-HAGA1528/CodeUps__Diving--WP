@@ -17,23 +17,7 @@
     <!-- breadcrumb -->
     <div class="top-breadcrumb top-breadcrumb--margin breadcrumb breadcrumb--padding">
         <div class="breadcrumb__inner inner">
-            <ol class="breadcrumb__items">
-                <!-- 1つめ -->
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item breadcrumb__item--white">
-                    <a itemprop="item" href="<?php echo $top ?>" class="breadcrumb__link breadcrumb__link--white">
-                        <span itemprop="name">TOP</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
-    
-                <!-- 2つめ -->
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item breadcrumb__item--white">
-                    <span itemprop="item" href="campaign.html" class="breadcrumb__link breadcrumb__link--white">
-                        <span itemprop="name">404</span>
-                    </span>
-                    <meta itemprop="position" content="2" />
-                </li>
-            </ol>
+            <?php get_template_part('parts/breadcrumb') ?>
         </div>
     </div>
     
