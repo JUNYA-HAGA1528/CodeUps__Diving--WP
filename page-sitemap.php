@@ -42,9 +42,9 @@
     <section class="top-site-map site-map fish-logo fish-logo--padding">
         <div class="site-map__inner inner">
 
-            <div class="footer__body">
-                <div class="footer__wrapper">
-                    <div class="footer__container footer-nav">
+            <div class="site-map__body">
+                <div class="site-map__wrapper">
+                    <div class="site-map__container footer-nav">
                         <ul class="footer-nav__items">
                             <li class="footer-nav__item">
                                 <div class="footer-nav__item-title footer-nav__item-title--logo">
@@ -68,7 +68,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__container footer__container--space footer-nav">
+                    <div class="site-map__container site-map__container--space footer-nav">
                         <ul class="footer-nav__items">
                             <li class="footer-nav__item footer-nav__item--black">
                                 <div class="footer-nav__item-title footer-nav__item-title--logo">
@@ -96,8 +96,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer__wrapper footer__wrapper-space">
-                    <div class="footer__container footer__container--space footer-nav">
+                <div class="site-map__wrapper site-map__wrapper--space">
+                    <div class="site-map__container site-map__container--space footer-nav">
                         <ul class="footer-nav__items">
                             <li class="footer-nav__item footer-nav__item--black">
                                 <div class="footer-nav__item-title footer-nav__item-title--logo">
@@ -118,7 +118,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__container footer__container--space footer-nav">
+                    <div class="site-map__container site-map__container--space footer-nav">
                         <ul class="footer-nav__items">
                             <li class="footer-nav__item footer-nav__item--black">
                                 <div class="footer-nav__item-title footer-nav__item-title--logo">

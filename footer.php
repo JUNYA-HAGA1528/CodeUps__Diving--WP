@@ -131,9 +131,12 @@
                                     <a href="<?php echo esc_url( home_url( '/information#info3' ) ); ?>">ファンダイビング</a>
                                 </li>
                             </ul>
-                            
-                            <li class="footer-nav__item-title">
-                                <a href="<?php echo $blog ?>">ブログ</a>
+                        </ul>
+                        <ul class="footer-nav__items">
+                            <li class="footer-nav__item">
+                                <div class="footer-nav__item-title">
+                                    <a href="<?php echo $blog ?>">ブログ</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -212,7 +215,6 @@
     <div class="scroll-top js-scroll-top">
         <a href="#"><img src="<?php echo get_theme_file_uri(); ?>/dist/assets/images/common/top-scroll.png" alt="上向きの矢印"></a>
     </div>
-
 
 
     
