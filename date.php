@@ -33,7 +33,11 @@
 
 
     <!-- breadcrumb -->
-    <?php get_template_part('parts/breadcrumb') ?>     
+    <div class="top-breadcrumb breadcrumb" >
+        <div class="breadcrumb__inner inner">
+            <?php get_template_part('parts/breadcrumb') ?>
+        </div>
+    </div>
     
     
 
