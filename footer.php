@@ -91,13 +91,13 @@
             
             <div class="footer__body">
                 <div class="footer__wrapper ">
-                    <div class="footer__container footer-nav">
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                    <div class="footer__container nav-list">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $campaign ?>">キャンペーン</a>
                                 </div>
-                                <div class="footer-nav__item-normal">
+                                <div class="nav-list__item-normal">
                                     <?php
                                         $terms = get_terms('campaign_category');
                                         foreach ( $terms as $term ) {
@@ -107,20 +107,20 @@
                                 </div>
                             </li>
                         </ul>
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $about ?>">私たちについて</a>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__container footer-nav">
-                        <ul class=" footer-nav__items footer-nav__item">
-                            <li class="footer-nav__item-title">
+                    <div class="footer__container nav-list">
+                        <ul class=" nav-list__items nav-list__item">
+                            <li class="nav-list__item-title">
                                 <a href="<?php echo $information ?>">ダイビング情報</a>
                             </li>
-                            <ul class="footer-nav__item js-tab-link-footer footer-nav__item-normal">
+                            <ul class="nav-list__item js-tab-link-footer nav-list__item-normal">
                                 <li>
                                     <a href="<?php echo esc_url( home_url( '/information#info1' ) ); ?>">ライセンス講習</a>
                                 </li>
@@ -132,9 +132,9 @@
                                 </li>
                             </ul>
                         </ul>
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $blog ?>">ブログ</a>
                                 </div>
                             </li>
@@ -142,20 +142,20 @@
                     </div>
                 </div>
                 <div class="footer__wrapper footer__wrapper-space">
-                    <div class="footer__container footer__container--space footer-nav">
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                    <div class="footer__container footer__container--space nav-list">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $voice ?>">お客様の声</a>
                                 </div>
                             </li>
                         </ul>
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $price ?>">料金一覧</a>
                                 </div>
-                                <div class="footer-nav__item-normal">
+                                <div class="nav-list__item-normal">
                                     <a href="<?php echo esc_url( home_url( '/price#price1' ) ); ?>">ライセンス講習</a>
                                     <a href="<?php echo esc_url( home_url( '/price#price2' ) ); ?>">体験ダイビング</a>
                                     <a href="<?php echo esc_url( home_url( '/price#price3' ) ); ?>">ファンダイビング</a>
@@ -163,38 +163,38 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__container footer__container--space footer-nav">
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                    <div class="footer__container footer__container--space nav-list">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $faq ?>">よくある質問</a>
                                 </div>
                             </li>
                         </ul>
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $privacy ?>">プライバシー<br class="u-mobile">ポリシー</a>
                                 </div>
                             </li>
                         </ul>
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $termsofservise ?>">利用規約</a>
                                 </div>
                             </li>
                         </ul>
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $contact ?>">お問い合わせ</a>
                                 </div>
                             </li>
                         </ul>
-                        <ul class="footer-nav__items">
-                            <li class="footer-nav__item">
-                                <div class="footer-nav__item-title">
+                        <ul class="nav-list__items">
+                            <li class="nav-list__item">
+                                <div class="nav-list__item-title">
                                     <a href="<?php echo $sitemap ?>">Site MAP</a>
                                 </div>
                             </li>

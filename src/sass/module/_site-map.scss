@@ -11,6 +11,42 @@
     margin: auto;
 }
 
+.site-map__body{
+    display: flex;
+    margin-top: rem(14);
+    @include mq(md){
+        margin-top: rem(0);
+        
+    }
+}
+
+.site-map__wrapper{
+    width: 50%;
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.site-map__wrapper-space{
+    padding-left: rem(12);
+    @include mq(md){
+        padding-left: rem(0);
+    }
+}
+
+.site-map__container{
+    margin-top: rem(12);
+    @include mq(md){
+        width: 50%;
+    }
+}
+
+.site-map__container--space{
+    @include mq(md){
+        padding-left: rem(18);
+    }
+}
+
 
 .footer-nav__item-title--logo{
     position: relative;

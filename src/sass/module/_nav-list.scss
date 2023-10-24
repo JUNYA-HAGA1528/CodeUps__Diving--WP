@@ -1,11 +1,11 @@
 @use "global" as *;
 
 
-.footer-nav__items + .footer-nav__items{
+.nav-list__items + .nav-list__items{
     margin-top: rem(16);
 }
 
-.footer-nav__item a {
+.nav-list__item a {
     display: inline-block;
     text-align: left;
     width: 100%;
@@ -15,7 +15,7 @@
     line-height: calc(18/16);
 }
 
-.footer-nav__item-title{
+.nav-list__item-title{
     position: relative;
     padding-top: rem(10);
     padding-bottom: rem(10);
@@ -26,7 +26,7 @@
     }
 }
 
-.footer-nav__item-title a::before {
+.nav-list__item-title a::before {
     background-image: url(../images/common/starfish.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@
     height: rem(18);
 }
 
-.footer-nav__item-normal a {
+.nav-list__item-normal a {
     font-weight: $regular;
     padding-top: rem(12);
     padding-bottom: rem(12);
